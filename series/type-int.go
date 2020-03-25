@@ -27,6 +27,8 @@ func (e *intElement) Set(value interface{}) {
 		e.e = i
 	case int:
 		e.e = int(value.(int))
+    case int64:
+		e.e = int(value.(int64))
 	case float64:
 		f := value.(float64)
 		if math.IsNaN(f) ||
